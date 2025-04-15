@@ -93,8 +93,19 @@ void insere()
 
 void remove()
 {
+	if (inicio == NULL) {
+		cout << "Fila Vazia\n";
+		return;
+	}
 
+	NO* temp = inicio;
+	inicio = inicio->prox;
 
+	if (inicio == NULL) {
+		fim = NULL;
+
+	}
+	free(temp);
 
 }
 
